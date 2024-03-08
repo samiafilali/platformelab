@@ -1,5 +1,6 @@
 package com.relations.model.dto;
 
+import jakarta.validation.constraints.Negative;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 import lombok.Data;
@@ -16,6 +17,6 @@ public class RefrigerateurDTO {
     @Positive(message = "La température maximale doit être un nombre positif")
     private int temperatureMax;
 
-    @Positive(message = "La température minimale doit être un nombre positif")
+    @Negative(message = "La température minimale doit être un nombre négatif")
     private int temperatureMin;
 }
