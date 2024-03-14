@@ -40,5 +40,6 @@ public class Utilisateur {
 	@OneToMany(mappedBy = "technicien")
 	@JsonIgnoreProperties("technicien")
 	private List<CompteRendu> compteRendus;
+
 }
 
