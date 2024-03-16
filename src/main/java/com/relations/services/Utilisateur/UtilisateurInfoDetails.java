@@ -1,10 +1,9 @@
 package com.relations.services.Utilisateur;
 
-import java.util.Arrays;
+
 import java.util.Collection;
 import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
+
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 
@@ -37,12 +36,7 @@ public class UtilisateurInfoDetails implements UserDetails {
     }
 
 
-	@Override
-	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		
-		return null;
-	}
+
 
 	@Override
 	public String getPassword() {
