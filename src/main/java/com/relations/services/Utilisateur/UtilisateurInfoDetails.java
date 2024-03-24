@@ -3,6 +3,7 @@ package com.relations.services.Utilisateur;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
@@ -24,6 +25,11 @@ public class UtilisateurInfoDetails implements UserDetails {
 	 */
 	private static final long serialVersionUID = 1L;
 	private final Utilisateur utilisateur;
+	String userName=null;
+    String password = null;
+    List<GrantedAuthority> authorities;
+
+	
 
     public UtilisateurInfoDetails(Utilisateur utilisateur) {
         this.utilisateur = utilisateur;
@@ -41,19 +47,19 @@ public class UtilisateurInfoDetails implements UserDetails {
 	@Override
 	public String getPassword() {
 		// TODO Auto-generated method stub
-		return null;
+		return password;
 	}
 
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return null;
+		return userName;
 	}
 
 	@Override
 	public boolean isAccountNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
